@@ -3,8 +3,8 @@ import params
 import helper_funcs
 from pathlib import Path
 
+logo_path = "assets/logo/logo3.png"
 
-logo_path = "assets\logo\logo3.png"
 
 def set_page_config():
     st.set_page_config(
@@ -14,9 +14,10 @@ def set_page_config():
 
     )
 
+
 def main():
     set_page_config()
-    
+
     st.title("Traffic Signs Detection with YOLOv8")
     st.write("Felix 2030026040")
     st.write("Jimmy 2030026220")
@@ -32,7 +33,6 @@ def main():
                 </style>
                 """
     st.markdown(custom_style, unsafe_allow_html=True)
-   
 
     with st.sidebar:
         st.image(logo_path, use_container_width=True)
@@ -60,7 +60,7 @@ def main():
 
     else:
         st.error("Please select a valid source!")
-    
+
 
 if __name__ == '__main__':
     main()
